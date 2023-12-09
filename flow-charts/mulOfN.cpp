@@ -1,17 +1,17 @@
-// Q4. sum of n numbers
+// Q5. Multiplication of n numbers
 
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    int n, sum = 0;
+    int n, mul = 1;
     cout << "Enter n : ";
     cin >> n;
     cout << endl;
     for (int i = 1; i <= n; i++)
     {
-        sum = sum + i;
+        mul = mul * i;
     }
-    cout << "Sum of first " << n << " Number is " << sum;
+    cout << "multiplication of first " << n << " Number is " << mul;
 }
