@@ -5,16 +5,15 @@ using namespace std;
 
 int main()
 {
-    int l, b;
+    int l, b, area, perimeter;
     cout << "Enter l : ";
     cin >> l;
     cout << endl;
     cout << "Enter b : ";
-    cin >> l;
+    cin >> b;
     cout << endl;
-    for (int i = 1; i <= n; i++)
-    {
-        mul = mul * i;
-    }
-    cout << "multiplication of first " << n << " Number is " << mul;
+    area = l * b;
+    perimeter = 2 * (l + b);
+    cout << "Area of the rectangle is " << area << endl;
+    cout << "Perimeter of the rectangle is " << perimeter << endl;
 }
