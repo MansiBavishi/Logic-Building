@@ -1,5 +1,4 @@
 // Q3. print 1 to n numbers
-//
 
 #include <iostream>
 using namespace std;
