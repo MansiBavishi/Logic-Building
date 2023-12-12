@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 60% 40%;
+}
+.div-left {
+  background-color: azure;
+}
+.div-right {
+  background-color: rgb(188, 232, 250);
+}
+.logo {
+  border-radius: 50%;
+}
