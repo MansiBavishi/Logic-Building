@@ -5,13 +5,17 @@ using namespace std;
 
 int main()
 {
-    int n, fact = 1;
-    cout << "Enter N : ";
+    int n, fact = 1, i = 2;
+    cout << "Enter n : ";
     cin >> n;
-    cout << endl;
-    for (int i = 3; i <= (n * n) / 2; i = i + 2)
+    if (n >= 1)
     {
         cout << fact << endl;
-        fact = fact * i * (i - 1);
+        for (; n > 1; --n)
+        {
+            fact = fact * i * (i + 1);
+            i = i + 2;
+            cout << fact << endl;
+        }
     }
 }

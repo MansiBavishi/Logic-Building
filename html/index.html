@@ -15,17 +15,54 @@
         <div class="text-center">
           <img src="./assets/logo.jpeg" alt="mini-logo" class="mini-logo" />
         </div>
-        <form>
-          <div class="text-center">
-            <input name="username" type="text" placeholder="Username" />
-          </div>
-          <div class="text-center">
-            <input name="password" type="password" placeholder="Password" />
-          </div>
-          <div class="text-center">
-            <input type="button" value="Login" class="btn-login" />
-          </div>
-        </form>
+        <div class="text-center div-right-part2">
+          <ul class="tabs">
+            <!-- tab1-login -->
+            <li class="tab">
+              <input type="radio" name="tabs" checked="checked" id="tab1" />
+              <label for="tab1">LOGIN </label>
+              <div id="tab-content1" class="content">
+                <form>
+                  <div class="text-center">
+                    <input name="username" type="text" placeholder="Username" />
+                  </div>
+                  <div class="text-center">
+                    <input
+                      name="password"
+                      type="password"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <button class="btn-login">Login</button>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <!-- tab2-register -->
+            <li class="tab">
+              <input type="radio" name="tabs" id="tab2" />
+              <label for="tab2">REGISTER</label>
+              <div id="tab-content2" class="content">
+                <form>
+                  <div class="text-center">
+                    <input name="username" type="text" placeholder="Username" />
+                  </div>
+                  <div class="text-center">
+                    <input
+                      name="password"
+                      type="password"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <button class="btn-reg">register</button>
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
