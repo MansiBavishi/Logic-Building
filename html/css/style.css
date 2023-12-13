@@ -16,6 +16,9 @@ body {
 }
 .div-right {
   background-color: rgb(188, 232, 250);
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 .logo {
   border-radius: 50%;
@@ -24,6 +27,14 @@ body {
   font-size: 20px;
   padding: 50px;
   text-align: center;
+}
+
+.para {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
 }
 .text-center {
   text-align: center;
@@ -54,6 +65,7 @@ input {
 
 /* tabs */
 .div-right-part2 {
+  display: flex;
   justify-content: center;
   position: relative;
   align-items: center;
@@ -63,11 +75,13 @@ input {
   display: block;
   margin: 40px auto;
   position: absolute;
+  text-align: center;
 }
 
 .tabs .tab {
   float: left;
   display: block;
+  width: 148px;
 }
 
 .tabs .tab > input[type="radio"] {
@@ -98,6 +112,7 @@ input {
   color: #dfdfdf;
   opacity: 0;
   transition: opacity 400ms ease-out;
+  width: 41%;
 }
 
 .tabs > .tab > [id^="tab"]:checked + label {
