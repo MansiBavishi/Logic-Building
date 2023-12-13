@@ -20,6 +20,11 @@ body {
 .logo {
   border-radius: 50%;
 }
+.paragraph {
+  font-size: 20px;
+  padding: 50px;
+  text-align: center;
+}
 .text-center {
   text-align: center;
 }
@@ -49,6 +54,7 @@ input {
 
 /* tabs */
 .div-right-part2 {
+  justify-content: center;
   position: relative;
   align-items: center;
 }
