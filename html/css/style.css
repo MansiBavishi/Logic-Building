@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  /* box-sizing: border-box; */
 }
 body {
   margin: 0;
@@ -46,7 +47,8 @@ input {
 }
 .mini-logo {
   border-radius: 50%;
-  width: 10%;
+  width: 20%;
+  margin-top: 290px;
 }
 .btn-login {
   background-color: #007bff;
