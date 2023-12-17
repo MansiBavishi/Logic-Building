@@ -4,6 +4,7 @@
 }
 body {
   margin: 0;
+  overflow: hidden;
 }
 .grid-container {
   display: grid;
@@ -11,11 +12,13 @@ body {
   grid-template-columns: 60% 40%;
 }
 .div-left {
-  background-color: azure;
-  margin-top: 100px;
+  background-image: linear-gradient(#ffd633, #ffe680);
+  padding-top: 100px;
 }
 .div-right {
-  background-color: rgb(188, 232, 250);
+  /* background-color: rgb(188, 232, 250); */
+
+  background-image: linear-gradient(#0066ff, #99c2ff);
   display: flex;
   justify-content: center;
   position: relative;
@@ -47,7 +50,9 @@ input {
 .mini-logo {
   border-radius: 50%;
   width: 20%;
-  margin-top: 290px;
+  margin-top: 203px;
+  position: relative;
+  z-index: 2;
 }
 .btn-login {
   background-color: #007bff;
@@ -70,6 +75,7 @@ input {
   justify-content: center;
   position: relative;
   align-items: center;
+  margin-bottom: 200px;
 }
 .tabs {
   width: 600px;
@@ -99,7 +105,7 @@ input {
   cursor: pointer;
   position: relative;
   color: #fff;
-  background: #4a83fd;
+  background: #303030;
 }
 
 .tabs .content {
