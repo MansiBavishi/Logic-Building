@@ -26,7 +26,6 @@ function factorial(n) {
 main();
 
 //store and display
-
 let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let arr2 = new Array(arr1.length);
 function store(arr1, arr2, i = 0) {
@@ -40,11 +39,9 @@ function store(arr1, arr2, i = 0) {
 store(arr1, arr2);
 
 //store and display in single array
-
 var n = prompt("Please enter n");
 console.log(n);
 var arr = new Array(n);
-
 function store(i = 0) {
   if (i == n) {
     console.log("arr : ", arr);
@@ -56,6 +53,23 @@ function store(i = 0) {
   store(i + 1);
 }
 store(arr, n);
+
+// Function to calculate the square root of a BigInt without using Math library
+function calculateSquareRootBigInt(n) {
+  if (n < 0n) {
+    return "Cannot calculate the square root of a negative number";
+  }
+  if (n === 0n || n === 1n) {
+    return n;
+  }
+  let x = n;
+  for (let i = 0; i < 100; i++) {
+    x = (x + n / x) >> 1n;
+  }
+  return x;
+}
+const result = calculateSquareRootBigInt(25n);
+console.log("Square root:", result);
 
 //function for checking whether the number is prime or not
 function isPrime(num) {
@@ -87,7 +101,7 @@ function fibonacci(n) {
 //function to get prime numbers from fib series
 function getPrimeNumbers(n) {
   const fib = fibonacci(n);
-  // console.log("Fibonacci series : ", fib);
+  console.log("Fibonacci series : ", fib);
   const primeNums = fib.filter((item) => isPrime(item)); //to filter the prime numbers in fibonacci series
   return primeNums;
 }
@@ -95,7 +109,7 @@ function getPrimeNumbers(n) {
 //function  to get the diff of prime numbers in array
 function getDiff(primeNums) {
   const diff = [];
-  for (let i = 1; i < primeNums.length; i++) {
+  for (let i = 1; i <= primeNums.length - 1; i++) {
     diff.push(primeNums[i] - primeNums[i - 1]);
   }
   return diff;
@@ -109,9 +123,10 @@ function Sum(difference) {
   }
   return sum;
 }
+
 //main function
 function main() {
-  const primeNumbers = getPrimeNumbers(1001);
+  const primeNumbers = getPrimeNumbers(10);
   const DiffArr = getDiff(primeNumbers);
   const ans = Sum(DiffArr);
   console.log("Prime numbers in fibbonacci series are : ", primeNumbers);
