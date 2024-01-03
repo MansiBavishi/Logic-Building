@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./assets/css/main.css" />
+	<style>
+		.tab-content{
+			display:none;
+		}
+		.tab-content:target{
+			display: block;
+		}
+	#img-container{
+		position: absolute;
+ 		z-index: 1;
+	}
+	.left{
+		width: 60%;
+	}
+.right{
+	position: relative;
+	width: 40%;
+}
+.form-tabs{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 50%;
+	width: 50%;
+	background-image: linear-gradient(to right, #0F2027,#2C5364);
+	border-radius: 20px;
+	box-shadow: 3px 3px 8.18px -0.82px black;
+}
+	.form-container{
+		width: 100%;
+	}
+	.input[type="radio"]{
+		display: none;
+	}
+.tab-content{
+	display: none;
+}
+	.input[type="radio"]:checked + .tab-content{
+		display: block;
+	}
+	</style>
+</head>
+
+<body>
+	<div style="display: flex; height: 97vh; width: 98vw;">
+		<div class="left"
+			style=" background-image: linear-gradient(to right, #0F2027,#2C5364); justify-content: center; align-items: center; display: flex; flex-direction: column; border-radius:7px;">
+			<img style="border-radius: 50%;" height="40%" width="40%"
+				src="https://1.bp.blogspot.com/-l8_rqehFDaU/X5q1rSoxzjI/AAAAAAAACD0/zlsrC9Y6ny8VM8sSKhxsEYqxcsCWEbCYwCLcBGAsYHQ/s1920/best-logos-208.png"
+				alt="Nature" />
+			<p style="text-align: center; overflow: hidden; text-overflow: ellipsis; line-height: 18px; max-height: 54px; color: white; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Lorem Ipsum is simply
+				dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+				text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+				specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+				remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+				containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+				including versions of Lorem Ipsum.</p>
+		</div>
+
+			<div class="right" style="width: 40%; ">
+				<div class="form-tabs" style="">
+					<div id="img-container" >
+						<img style="border-radius: 50%;"height="50px" width="50px"
+						src="https://1.bp.blogspot.com/-l8_rqehFDaU/X5q1rSoxzjI/AAAAAAAACD0/zlsrC9Y6ny8VM8sSKhxsEYqxcsCWEbCYwCLcBGAsYHQ/s1920/best-logos-208.png"
+						alt="Nature" />
+					</div>
+					<div id="form-container">
+						<label for="login"> Login</label>
+	<input type="radio" name="tabs" id="login" value="Login" checked>
+	<div class="tab-content">
+	Login
+	</div>
+	<label for="register"> Register</label>
+	
+	<input type="radio" name="tabs" id="register" value="Register">
+	<div class="tab-content">
+	Register
+	</div>
+					</div>
+				</div>
+<!-- 			
+				<div style="height: 15vh;">
+						<h2 style="float: right; ">Register</h2>
+					<a href="#login">
+						<div style="float: left; border-right: 2px solid black; width: 40%; border-bottom: 2px solid black;">
+						Login</div>
+					</a>
+					<a href="#register">
+						<div style="float: right;border-bottom: 2px solid black; width: 50%;">Register</div>
+					</a>
+					<div id="login">
+						<input type="text" name="" placeholder="Enter Name"><br>
+						<input type="password" name="" placeholder="Enter Pass" id=""><br>
+						<button>Login</button>
+					</div>
+					<div id = "register" class="tab-content" >
+
+						<input type="text" name="" placeholder="Enter Name"><br>
+						<input type="password" name="" placeholder="Enter Pass" id=""><br>
+						<button>Register</button>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

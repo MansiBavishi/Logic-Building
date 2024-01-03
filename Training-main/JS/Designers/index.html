@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Designers Learning JS</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+		
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+		<!-- Custom CSS -->
+		<link href="./Assets/CSS/main.css" rel="stylesheet" crossorigin="anonymous">
+		
+		<!-- Custom JS -->
+		<script type="module" src="./Assets/JS/main.js"></script>
+
+	</head>
+	<body>
+
+		<!-- <div class="accordion" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						<strong>
+							<i>
+								<span id="partOneText"> Datatypes and Variables </span>
+							</i>
+						</strong>
+					</button>
+				</h2>
+				<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+
+						<div class="accordion" id="accordionDataTypesAndVariables">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseOne" aria-expanded="false" aria-controls="subCollapseOne">
+										<strong>
+											<i>
+												<span id="partOneText"> Datatypes</span>
+											</i>
+										</strong>
+									</button>
+								</h2>
+								<div id="subCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionDataTypesAndVariables">
+									<div class="accordion-body">
+										<div class="accordion" id="accordionDataTypes">
+											<div class="accordion-item">
+
+												<section strings>
+													<h2 class="accordion-header">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseOneSubOne" aria-expanded="false" aria-controls="subCollapseOneSubOne">
+															<strong>
+																<i>
+																	<span id="partOneText"> Strings </span>
+																</i>
+															</strong>
+														</button>
+													</h2>
+													<div id="subCollapseOneSubOne" class="accordion-collapse collapse" data-bs-parent="#accordionDataTypes">
+														<div class="accordion-body">
+															<div class="card-body">
+																<span class="text-center">
+																	<strong>
+																		String
+																	</strong>
+																</span>
+																<hr>
+																<ul>
+																	<li> A string can be written between <code>'Single Quotes'</code> or <code>"Double Quotes"</code> as javascript accepts both as valid strings. </li>
+																	<li> While dealing with strings, there are nemourous methods that can help with manipulation of the string. </li>
+																</ul>
+																<hr>
+																<div class="table-responsive">
+																	<table class="table table-dark table-striped table-hover table-sm caption-top table-bordered">
+																		<caption>Such Methods are as follows.</caption>
+																		<thead>
+																			<tr class="text-center">
+																				<td>Method</td>
+																				<td>Description</td>
+																				<td>Example</td>
+																			</tr>
+																		</thead>
+
+																		<tbody>
+
+																			<tr>
+																				<td class="text-center">Length</td>
+																				<td>
+																					<ul>
+																						<li>
+																							The <code>length</code> property returns the length of a string.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = <span class="values">"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span></span></var>;
+																						<br>
+																						<var>let <span class="variables">length = text.</span>length</var>;
+																						<br>
+																						<var>console.log</var><span class="variables">(length)</span>; <samp>/* returns 26 */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">slice()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							<code>slice()</code>
+																							extracts a part of a string and returns the extracted part in a new string.
+																						</li>
+																						<li>The method takes 2 parameters: start position, and end position (end not included).</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">str = <span class="values">"Apple, Banana, Kiwi"</span></span></var>;
+																						<br>
+																						<var>let <span class="variables">part = str.<var>slice</var>(<span class="brackets">7</span>, <span class="brackets">13</span>)</span></var>;
+																						<br>
+																						<var>console.log</var><span class="variables">(part)</span>; <samp>/* returns BANANA */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">substring()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							<code>substring()</code> is similar to <code>slice().</code>
+																						</li>
+																						<li>The difference is that start and end values less than 0 are treated as 0 in <code>substring()</code>.</li>
+																						<li>If you omit the second parameter, <code>substring()</code> will slice out the rest of the string.</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">str = <span class="values">"Apple, Banana, Kiwi"</span></span></var>;
+																						<br>
+																						<var>let <span class="variables">part = str.<var>substring</var>(<span class="brackets">7</span>, <span class="brackets">13</span>)</span></var>;
+																						<br>
+																						<var>console.log</var><span class="variables">(part)</span>; <samp>/* returns BANANA */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">substr()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							<code>substr()</code> is similar to <code>slice().</code>
+																						</li>
+																						<li>The difference is that the second parameter specifies the <b>length</b> of the extracted part.</li>
+																						<li>If you omit the second parameter, <code>substr()</code> will slice out the rest of the string.</li>
+																						<li>If the first parameter is negative, the position counts from the end of the string.</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">str = <span class="values">"Apple, Banana, Kiwi"</span></span></var>;
+																						<br>
+																						<var>let <span class="variables">part = str.<var>substr</var>(<span class="brackets">7</span>, <span class="brackets">6</span>)</span></var>;
+																						<br>
+																						<var>console.log</var><span class="variables">(part)</span>; <samp>/* returns BANANA */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">replace()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							The <code>replace()</code> method replaces a specified value with another value in a string.
+																						</li>
+																						<li>
+																							The <code>replace()</code> method does not change the string it is called on.
+																						</li>
+																						<li>
+																							The <code>replace()</code> method returns a new string.
+																						</li>
+																						<li>
+																							The <code>replace()</code> method replaces only the first match
+																						</li>
+																						<li>
+																							If you want to replace all matches, use a regular expression with the <code>/g</code> flag set.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = <span class="values">"Please visit Microsoft!"</span></span></var>;
+																						<br>
+																						<var>let <span class="variables">newText = text.<var>replace</var>(<span class="values">"Microsoft"</span>, <span class="values">"Inventyv"</span>)</span></var>;
+																						<br>
+																						<var>console.log</var><span class="variables">(newText)</span>; <samp>/* returns Please visit Inventyv! */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">replaceAll()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							In 2021, JavaScript introduced the string method <code>replaceAll()</code>.
+																						</li>
+																						<li>
+																							The <code>replaceAll()</code> method allows you to specify a regular expression instead of a string to be replaced.
+																						</li>
+																						<li>
+																							If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = <span class="values">"I love cats. Cats are very easy to love. Cats are very popular."</span></span></var>;
+																						<br>
+																						<span class="variables">text.<var>replaceAll</var>(<span class="values">/Cats/g</span>, <span class="values">"Dogs"</span>)</span>;
+																						<br>
+																						<span class="variables">text.<var>replaceAll</var>(<span class="values">/cats/g</span>, <span class="values">"dogs"</span>)</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(text)</span>; <samp>/* returns I love dogs. Dogs are very easy to love. Dogs are very popular. */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">toUpperCase()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							A string is converted to upper case with <code>toUpperCase()</code>.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = <span class="values">"Hello World...!"</span></span></var>;
+																						<br>
+																						<span class="variables">textTwo = text.<var>toUpperCase</var>()</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(textTwo)</span>; <samp>/* returns HELLO WORLD...! */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">toLowerCase()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							A string is converted to upper case with <code>toLowerCase()</code>.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = </span> <span class="values">"Hello World...!"</span></var>;
+																						<br>
+																						<span class="variables">textTwo = text.<var>toLowerCase</var>()</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(textTwo)</span>; <samp>/* returns hello world...! */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">concat()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							<code> concat() </code> joins two or more strings.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">textOne = </span> <span class="values">"Hello"</span></var>;
+																						<br>
+																						<span class="variables">textTwo = </span> <span class="values">"World...!"</span>;
+																						<br>
+																						<span class="variables">textThree = textOne.<var>concat</var>(<span class="values">" "</span>, textTwo)</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(textThree)</span>; <samp>/* returns Hello World...! */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">trim()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							The <code>trim()</code> method removes whitespace from both sides of a string.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = </span> <span class="values">"&nbsp;&nbsp;&nbsp;&nbsp;Hello World...!&nbsp;&nbsp;&nbsp;&nbsp;"</span></var>;
+																						<br>
+																						<span class="variables">textTwo = textOne.<var>trim</var>()</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(textTwo)</span>; <samp>/* returns Hello World...! */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">trimStart()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							The <code>trimStart()</code> method works like <code>trim()</code>, but removes whitespace only from the start of a string.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = </span> <span class="values">"&nbsp;&nbsp;&nbsp;&nbsp;Hello World...!&nbsp;&nbsp;&nbsp;&nbsp;"</span></var>;
+																						<br>
+																						<span class="variables">textTwo = textOne.<var>trimStart</var>()</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(textTwo)</span>; <samp>/* returns Hello World...!&nbsp;&nbsp;&nbsp;&nbsp;*/</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">trimEnd()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							The <code>trimEnd()</code> method works like <code>trim()</code>, but removes whitespace only from the end of a string.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = </span> <span class="values">"&nbsp;&nbsp;&nbsp;&nbsp;Hello World...!&nbsp;&nbsp;&nbsp;&nbsp;"</span></var>;
+																						<br>
+																						<span class="variables">textTwo = textOne.<var>trimEnd</var>()</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(textTwo)</span>; <samp>/* returns &nbsp;&nbsp;&nbsp;&nbsp;Hello World...! */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">padStart()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							The <code>padStart()</code> method pads a string from the start.
+																						</li>
+																						<li>
+																							It pads a string with another string (multiple times) until it reaches a given length.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = </span> <span class="values">"5"</span></var>;
+																						<br>
+																						<var>let <span class="variables">padded = text.<var>padStart</var>(<span class="brackets">4</span>, <span class="values">"0"</span>)</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(padded)</span>; <samp>/* returns 0005 */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">padEnd()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							The <code>padEnd()</code> method pads a string from the end.
+																						</li>
+																						<li>
+																							It pads a string with another string (multiple times) until it reaches a given length.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = </span> <span class="values">"5"</span></var>;
+																						<br>
+																						<var>let <span class="variables">padded = text.<var>padEnd</var>(<span class="brackets">4</span>, <span class="values">"0"</span>)</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(padded)</span>; <samp>/* returns 5000 */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">charAt()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							The <code>charAt()</code> method returns the character at a specified index (position) in a string.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = </span> <span class="values">"HELLO WORLD"</span></var>;
+																						<br>
+																						<var>let <span class="variables">char = text.<var>charAt</var>(<span class="brackets">0</span>)</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(char)</span>; <samp>/* returns H */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">charCodeAt()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							The <code>charCodeAt()</code> method returns the unicode of the character at a specified index in a string.
+																						</li>
+																						<li>
+																							The method returns a UTF-16 code (an integer between 0 and 65535).
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = </span> <span class="values">"HELLO WORLD"</span></var>;
+																						<br>
+																						<var>let <span class="variables">char = text.<var>charCodeAt</var>(<span class="brackets">0</span>)</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(char)</span>; <samp>/* returns 72 */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td class="text-center">split()</td>
+																				<td>
+																					<ul>
+																						<li>
+																							A string can be converted to an array with the <code>split()</code> method.
+																						</li>
+																						<li>
+																							If the separator is omitted, the returned array will contain the whole string in index [0].
+																						</li>
+																						<li>
+																							If the separator is "", the returned array will be an array of single characters.
+																						</li>
+																					</ul>
+																				</td>
+																				<td>
+																					<code>
+																						<var>let <span class="variables">text = </span> <span class="values">"a,b,c,d,e,f"</span></var>;
+																						<br>
+																						<var>let <span class="variables">char = text.<var>split</var>(<span class="values">","</span>)</span>;
+																						<br>
+																						<var>console.log</var><span class="variables">(char[0])</span>; <samp>/* returns a */</samp>
+																					</code>
+																				</td>
+																			</tr>
+
+																		</tbody>
+
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+												</section>
+
+												<section Numbers>
+													<h2 class="accordion-header">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseOneSubTwo" aria-expanded="false" aria-controls="subCollapseOneSubTwo">
+															<strong>
+																<i>
+																	<span id="partOneText"> Numbers </span>
+																</i>
+															</strong>
+														</button>
+													</h2>
+													<div id="subCollapseOneSubTwo" class="accordion-collapse collapse" data-bs-parent="#accordionDataTypes">
+														<div class="accordion-body">
+															<div class="card-body">
+																
+															</div>
+														</div>
+													</div>
+												</section>
+
+												<section Boolean>
+													<h2 class="accordion-header">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseOneSubThree" aria-expanded="false" aria-controls="subCollapseOneSubThree">
+															<strong>
+																<i>
+																	<span id="partOneText"> Boolean </span>
+																</i>
+															</strong>
+														</button>
+													</h2>
+													<div id="subCollapseOneSubThree" class="accordion-collapse collapse" data-bs-parent="#accordionDataTypes">
+														<div class="accordion-body">
+															<div class="card-body">
+																
+															</div>
+														</div>
+													</div>
+												</section>
+
+												<section Array>
+													<h2 class="accordion-header">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseOneSubFour" aria-expanded="false" aria-controls="subCollapseOneSubFour">
+															<strong>
+																<i>
+																	<span id="partOneText"> Array </span>
+																</i>
+															</strong>
+														</button>
+													</h2>
+													<div id="subCollapseOneSubFour" class="accordion-collapse collapse" data-bs-parent="#accordionDataTypes">
+														<div class="accordion-body">
+															<div class="card-body">
+																
+															</div>
+														</div>
+													</div>
+												</section>
+
+												<section Object>
+													<h2 class="accordion-header">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseOneSubFive" aria-expanded="false" aria-controls="subCollapseOneSubFive">
+															<strong>
+																<i>
+																	<span id="partOneText"> Object </span>
+																</i>
+															</strong>
+														</button>
+													</h2>
+													<div id="subCollapseOneSubFive" class="accordion-collapse collapse" data-bs-parent="#accordionDataTypes">
+														<div class="accordion-body">
+															<div class="card-body">
+																
+															</div>
+														</div>
+													</div>
+												</section>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<section variables>
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseTwo" aria-expanded="false" aria-controls="subCollapseTwo">
+											<strong>
+												<i>
+													<span id="partOneText"> Variables</span>
+												</i>
+											</strong>
+										</button>
+									</h2>
+									<div id="subCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionDataTypesAndVariables">
+										<div class="accordion-body">
+											<div class="accordion" id="accordionVariables">
+												<div class="accordion-item">
+													<section LET>
+														<h2 class="accordion-header">
+															<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseTwoSubOne" aria-expanded="false" aria-controls="subCollapseTwoSubOne">
+																<strong>
+																	<i>
+																		<span id="partOneText"> Let </span>
+																	</i>
+																</strong>
+															</button>
+														</h2>
+														<div id="subCollapseTwoSubOne" class="accordion-collapse collapse" data-bs-parent="#accordionVariables">
+															<div class="accordion-body">
+																<div class="card-body">
+																	
+																</div>
+															</div>
+														</div>
+													</section>
+
+													<section VAR>
+														<h2 class="accordion-header">
+															<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseTwoSubTwo" aria-expanded="false" aria-controls="subCollapseTwoSubTwo">
+																<strong>
+																	<i>
+																		<span id="partOneText"> Var </span>
+																	</i>
+																</strong>
+															</button>
+														</h2>
+														<div id="subCollapseTwoSubTwo" class="accordion-collapse collapse" data-bs-parent="#accordionVariables">
+															<div class="accordion-body">
+																<div class="card-body">
+																	
+																</div>
+															</div>
+														</div>
+													</section>
+
+													<section Const>
+														<h2 class="accordion-header">
+															<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseTwoSubThree" aria-expanded="false" aria-controls="subCollapseTwoSubThree">
+																<strong>
+																	<i>
+																		<span id="partOneText"> Const </span>
+																	</i>
+																</strong>
+															</button>
+														</h2>
+														<div id="subCollapseTwoSubThree" class="accordion-collapse collapse" data-bs-parent="#accordionVariables">
+															<div class="accordion-body">
+																<div class="card-body">
+																	
+																</div>
+															</div>
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<h2 class="accordion-header">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+						<strong>
+							<i>
+								<span id="partOneText"> Control Statements </span>
+							</i>
+						</strong>
+					</button>
+				</h2>
+				<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+
+						<div class="accordion" id="accordionControlStatements">
+							<div class="accordion-item">
+								
+								<section IF Else>
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseCsOne" aria-expanded="false" aria-controls="subCollapseCsOne">
+											<strong>
+												<i>
+													<span id="partOneText"> If Else Statement </span>
+												</i>
+											</strong>
+										</button>
+									</h2>
+									<div id="subCollapseCsOne" class="accordion-collapse collapse" data-bs-parent="#accordionControlStatements">
+										<div class="accordion-body">
+											<div class="card-body">
+												
+											</div>
+										</div>
+									</div>
+								</section>
+
+								<section Nested If Else>
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseCsTwo" aria-expanded="false" aria-controls="subCollapseCsTwo">
+											<strong>
+												<i>
+													<span id="partOneText"> Nested If Else Statement </span>
+												</i>
+											</strong>
+										</button>
+									</h2>
+									<div id="subCollapseCsTwo" class="accordion-collapse collapse" data-bs-parent="#accordionControlStatements">
+										<div class="accordion-body">
+											<div class="card-body">
+												
+											</div>
+										</div>
+									</div>
+
+								</section>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<!-- <div class="row-cols-6">
+			<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#datatypesAndVariables">Datatypes and Variables</button>
+		</div>
+
+		<div>
+			<div id="datatypesAndVariables" class="card bg-dark text-white collapse accordion-flush">
+				<div class="card-header row text-center">
+					<div class="col-8">
+						<h5>Examples</h5>
+					</div>
+					<div class="col-4">
+						<h5>Datatypes and Variables</h5>
+					</div>
+
+				</div>
+				<div class="card-body">
+					<div class="row g-2">
+						<div class="col-8">
+							<div class="row">
+								<div class="col">
+									<div class="card">
+										<div class="card-header text-center">
+											<h6>Datatypes</h6>
+										</div>
+										<div class="card-body">
+											
+											<div class="accordion" id="accordionDatatypes">
+												
+												<div class="accordion-item">
+													<h2 class="accordion-header" id="headingOne">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseString" aria-expanded="false" aria-controls="collapseString">
+														Strings
+														</button>
+													</h2>
+													<div id="collapseString" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionDatatypes">
+														<div class="accordion-body p-0">
+															<ul>
+																<li> A string can be written between <code>'Single Quotes'</code> or <code>"Double Quotes"</code> as javascript accepts both as valid strings. </li>
+																<li> While dealing with strings, there are nemourous methods that can help with manipulation of the string. </li>
+															</ul>
+															<hr>
+															<h6>String Methods</h6>
+															<hr>
+															<div class="bg-dark text-white p-1 borderRadiusPointFive row g-3">
+																<div class="bg-light text-black p-3 borderRadiusPointFive">
+																	<caption><code>Length</code> - returns the length of a string.</caption>
+																</div>
+																<code>
+																	<var>let <span class="variables">text = <span class="values">"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span></span></var>;
+																	<br>
+																	<var>let <span class="variables">length = text.</span>length</var>;
+																	<br>
+																	<var>console.log</var><span class="variables">(length)</span>; <samp>/* returns 26 */</samp>
+																</code>
+																<hr>
+																<div class="bg-light text-black p-3 borderRadiusPointFive">
+																	<p><code>slice()</code> - extracts a part of a string and returns the extracted part in a new string.</p>
+																	<p>The method takes 2 parameters: start position, and end position (end not included).</p>
+																</div>
+																<code>
+																	<var>let <span class="variables">str = <span class="values">"Apple, Banana, Kiwi"</span></span></var>;
+																	<br>
+																	<var>let <span class="variables">part = str.<var>slice</var>(<span class="brackets">7</span>, <span class="brackets">13</span>)</span></var>;
+																	<br>
+																	<var>console.log</var><span class="variables">(part)</span>; <samp>/* returns BANANA */</samp>
+																</code>	
+																<hr>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												<div class="accordion-item">
+													<h2 class="accordion-header" id="headingTwo">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNumber" aria-expanded="false" aria-controls="collapseNumber">
+															Number
+														</button>
+													</h2>
+													<div id="collapseNumber" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionDatatypes">
+														<div class="accordion-body">
+															
+														</div>
+													</div>
+												</div>
+												
+												<div class="accordion-item">
+													<h2 class="accordion-header" id="headingThree">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBoolean" aria-expanded="false" aria-controls="collapseBoolean">
+															Boolean
+														</button>
+													</h2>
+													<div id="collapseBoolean" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionDatatypes">
+														<div class="accordion-body">
+															
+														</div>
+													</div>
+												</div>
+
+												<div class="accordion-item">
+													<h2 class="accordion-header" id="headingThree">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArray" aria-expanded="false" aria-controls="collapseArray">
+															Array
+														</button>
+													</h2>
+													<div id="collapseArray" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionDatatypes">
+														<div class="accordion-body">
+															
+														</div>
+													</div>
+												</div>
+
+												<div class="accordion-item">
+													<h2 class="accordion-header" id="headingThree">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObject" aria-expanded="false" aria-controls="collapseObject">
+															Object
+														</button>
+													</h2>
+													<div id="collapseObject" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionDatatypes">
+														<div class="accordion-body">
+															
+														</div>
+													</div>
+												</div>
+											
+											</div>
+										
+										</div>
+										<div class="card-footer"></div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="card">
+										<div class="card-header text-center">
+											<h6>Variables</h6>
+										</div>
+										<div class="card-body">
+
+											<div class="accordion" id="accordionVariables">
+												
+												<div class="accordion-item">
+													<h2 class="accordion-header" id="headingOne">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVar" aria-expanded="false" aria-controls="collapseVar">
+														Var
+														</button>
+													</h2>
+													<div id="collapseVar" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionVariables">
+														<div class="accordion-body">
+														
+														</div>
+													</div>
+												</div>
+												
+												<div class="accordion-item">
+													<h2 class="accordion-header" id="headingTwo">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLet" aria-expanded="false" aria-controls="collapseLet">
+															Let
+														</button>
+													</h2>
+													<div id="collapseLet" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionVariables">
+														<div class="accordion-body">
+															
+														</div>
+													</div>
+												</div>
+												
+												<div class="accordion-item">
+													<h2 class="accordion-header" id="headingThree">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConst" aria-expanded="false" aria-controls="collapseConst">
+															Const
+														</button>
+													</h2>
+													<div id="collapseConst" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionVariables">
+														<div class="accordion-body">
+															
+														</div>
+													</div>
+												</div>
+											
+											</div>
+
+										</div>
+										<div class="card-footer"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="card">
+								<div class="card-header text-center">
+									<h6>Datatypes and Variables</h6>
+								</div>
+								<div class="card-body"></div>
+								<div class="card-footer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div> -->
+
+
+		<section title="Buttons to operate Sections below.">
+			<div class="row g-6">
+				<div class="row g-2">
+					<div>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#First-Program" aria-controls="First-Program">First Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Second-Program" aria-controls="Second-Program">Second Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Third-Program" aria-controls="Third-Program">Third Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Fourth-Program" aria-controls="Fourth-Program">Fourth Program</button>
+						<!-- <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Fifth-Program" aria-controls="Fifth-Program">Fifth Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Sixth-Program" aria-controls="Sixth-Program">Sixth Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Seventh-Program" aria-controls="Seventh-Program">Seventh Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Eigth-Program" aria-controls="Eigth-Program">Eigth Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Nineth-Program" aria-controls="Nineth-Program">Nineth Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Tenth-Program" aria-controls="Tenth-Program">Tenth Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Eleventh-Program" aria-controls="Eleventh-Program">Eleventh Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Twelfth-Program" aria-controls="Twelfth-Program">Twelfth Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Thirteenth-Program" aria-controls="Thirteenth-Program">Thirteenth Program</button>
+					</div>
+				</div>
+				<div class="row g-2">
+					<div>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Fourteen-Program" aria-controls="Fourteen-Program">Fourteen Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Fifteen-Program" aria-controls="Fifteen-Program">Fifteen Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Sixteen-Program" aria-controls="Sixteen-Program">Sixteen Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Seventeen-Program" aria-controls="Seventeen-Program">Seventeen Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Eighteen-Program" aria-controls="Eighteen-Program">Eighteen Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Nineteen-Program" aria-controls="Nineteen-Program">Nineteen Program</button>
+						<button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#Twenty-Program" aria-controls="Twenty-Program">Twenty Program</button> -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<br>
+
+		<section class="collapse" title="First Program" id="First-Program">
+			<div class="card">
+				<div class="card-header">
+					<div class="w-100 d-flex justify-content-center">
+						<h5>First Program</h5>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="row g-2" style="height: 5%;">
+						<div class="col">
+							<div class="input-group input-group-sm mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+								<input type="number" class="form-control" id="fpFirstNumber">
+							</div>
+							<div class="input-group input-group-sm mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-sm">Second Number</span>
+								<input type="number" class="form-control" id="fpSecondNumber">
+							</div>
+						</div>
+						<div class="col align-self-center">
+							<div class="row g-3" style="height: 5%;">
+								<div class="row">
+									<div class="col-4">
+										<button class="btn btn-success w-100" type="submit" id="fpOperationsSubmit">Results</button>
+									</div>
+									<div class="col-4">
+										<button class="btn btn-secondary w-100" id="fpOperationsRandom">Random Number Generation</button>
+									</div>
+									<div class="col-4">
+										<button class="btn btn-warning w-100" style="color: #2d333a;" id="fpOperationsReset">reset</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer collapse" id="First-Program-result">
+					<table class="table table-hover">
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">First Number</th>
+								<th scope="col">Operation</th>
+								<th scope="col">Second Number</th>
+								<th scope="col">Result</th>
+							</tr>
+						</thead>
+						<tbody id="fpResults"></tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Second Program" id="Second-Program">
+			<div class="card">
+				<div class="card-header">
+					<div class="w-100 d-flex justify-content-center">
+						<h5>Second Program</h5>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="row g-2" style="height: 5%;">
+						<div class="col">
+							<div class="input-group input-group-sm mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+								<input type="number" class="form-control" id="spFirstNumber">
+							</div>
+						</div>
+						<div class="col align-self-center">
+							<div class="row g-3" style="height: 5%;">
+								<div class="row">
+									<div class="col-4">
+										<button class="btn btn-success w-100" type="submit" id="spOperationsSubmit">Results</button>
+									</div>
+									<div class="col-4">
+										<button class="btn btn-secondary w-100" id="spOperationsRandom">Random Number Generation</button>
+									</div>
+									<div class="col-4">
+										<button class="btn btn-warning w-100" style="color: #2d333a;" id="spOperationsReset">reset</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer collapse" id="Second-Program-result">
+					<table class="table table-hover">
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">Operation</th>
+								<th scope="col">Formula</th>
+								<th scope="col">Result</th>
+							</tr>
+						</thead>
+						<tbody id="spResults"></tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Third Program" id="Third-Program">
+			<div class="card">
+				<div class="card-header">
+					<div class="w-100 d-flex justify-content-center">
+						<h5>Third Program</h5>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="row g-2" style="height: 5%;">
+						<div class="col">
+							<div class="input-group input-group-sm mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+								<input type="number" class="form-control" id="tpFirstNumber">
+							</div>
+							<div class="input-group input-group-sm mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-sm">Second Number</span>
+								<input type="number" class="form-control" id="tpSecondNumber">
+							</div>
+						</div>
+						<div class="col align-self-center">
+							<div class="row g-3" style="height: 5%;">
+								<div class="row">
+									<div class="col-4">
+										<button class="btn btn-success w-100" type="submit" id="tpOperationsSubmit">Results</button>
+									</div>
+									<div class="col-4">
+										<button class="btn btn-secondary w-100" id="tpOperationsRandom">Random Number Generation</button>
+									</div>
+									<div class="col-4">
+										<button class="btn btn-warning w-100" style="color: #2d333a;" id="tpOperationsReset">reset</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer collapse" id="Third-Program-result">
+					<table class="table table-hover">
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">Number One</th>
+								<th scope="col">Operation</th>
+								<th scope="col">Number Two</th>
+								<th scope="col">Result</th>
+							</tr>
+						</thead>
+						<tbody id="tpResults"></tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Fourth Program" id="Fourth-Program">
+			<div class="card">
+				<div class="card-header">
+					<div class="w-100 d-flex justify-content-center">
+						<h5>Fourth Program</h5>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="row g-2" style="height: 5%;">
+						<div class="col">
+							<div class="input-group input-group-sm mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+								<input type="number" class="form-control" id="fopFirstNumber">
+							</div>
+						</div>
+						<div class="col align-self-center">
+							<div class="row g-3" style="height: 5%;">
+								<div class="row">
+									<div class="col-4">
+										<button class="btn btn-success w-100" type="submit" id="fopOperationsSubmit">Results</button>
+									</div>
+									<div class="col-4">
+										<button class="btn btn-secondary w-100" id="fopOperationsRandom">Random Number Generation</button>
+									</div>
+									<div class="col-4">
+										<button class="btn btn-warning w-100" style="color: #2d333a;" id="fopOperationsReset">reset</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer collapse" id="Fourth-Program-result">
+					<table class="table table-hover">
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">Number One</th>
+								<th scope="col">Operation</th>
+								<th scope="col">Formula</th>
+								<th scope="col">Result</th>
+							</tr>
+						</thead>
+						<tbody id="fopResults"></tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<!-- <section class="collapse" title="Fifth Program" id="Fifth-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Fifth Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="fipFirstNumber">
+						</div>
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">Second Number</span>
+							<input type="number" class="form-control" id="fipSecondNumber">
+						</div>
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">Third Number</span>
+							<input type="number" class="form-control" id="fipThirdNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="fipOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="fipOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="fipOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6 align-self-center">
+					<div class="row">
+						<div class="col">
+							<div id="fipResultsMax" class="bg-dark p-2 text-white">
+								<label>Maximum : </label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Sixth Program" id="Sixth-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Sixth Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="sipFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="sipOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="sipOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="sipOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="sipResultTemp" class="bg-dark p-2 text-white">
+								<label>Today's Temperature is : </label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Seventh Program" id="Seventh-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Seventh Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="sepFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="sepOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="sepOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="sepOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="sepResultFact" class="bg-dark p-2 text-white">
+								<label>Factorial : </label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Eigth Program" id="Eigth-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Eigth Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="epFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="epOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="epOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="epOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="epResultFib" class="bg-dark p-2 text-white">
+								<label>Fibonacci Series : </label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Nineth Program" id="Nineth-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Nineth Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="npFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="npOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="npOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="npOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="npResultFib" class="bg-dark p-2 text-white">
+								<label>Fibonacci Series : </label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Tenth Program" id="Tenth-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Tenth Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="tepFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="tepOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="tepOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="tepOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="tepResultFib" class="bg-dark p-2 text-white">
+								<label>Fibonacci Series : </label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Eleventh Program" id="Eleventh-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Eleventh Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="elpFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="elpOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="elpOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="elpOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="elpResultNum" class="bg-dark p-2 text-white">
+								<label>There are ________ number of digits in input...!</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Twelfth Program" id="Twelfth-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Twelfth Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="twpFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="twpOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="twpOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="twpOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="twpResultNum" class="bg-dark p-2 text-white">
+								<label>The reverse of</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Thirteenth Program" id="Thirteenth-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Thirteenth Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="thpFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="thpOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="thpOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="thpOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="thpResultNum" class="bg-dark p-2 text-white">
+								<label>The reverse of</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Fourteen Program" id="Fourteen-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Fourteen Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="foupFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="foupOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="foupOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="foupOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="foupResultNum" class="bg-dark p-2 text-white">
+								<label>The reverse of</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Fifteen Program" id="Fifteen-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Fifteen Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="fifpFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="fifpOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="fifpOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="fifpOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="fifpResultNum" class="bg-dark p-2 text-white">
+								<label>The reverse of</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Sixteen Program" id="Sixteen-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Sixteen Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="elvpFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="elvpOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="elvpOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="elvpOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="elvpResultNum" class="bg-dark p-2 text-white">
+								<label>There are ________ number of digits in input...!</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Seventeen Program" id="Seventeen-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Seventeen Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="sevpFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="sevpOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="sevpOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="sevpOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="sevpResultNum" class="bg-dark p-2 text-white">
+								<label>Series : </label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Eighteen Program" id="Eighteen-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Eighteen Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="eigpFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="eigpOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="eigpOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="eigpOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="eigpResultNum" class="bg-dark p-2 text-white">
+								<label>Series : </label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Nineteen Program" id="Nineteen-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Nineteen Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="ninpFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="ninpOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="ninpOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="ninpOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="ninpResultNum" class="bg-dark p-2 text-white">
+								<label>Series : </label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="collapse" title="Twenty Program" id="Twenty-Program">
+			<div class="w-100 d-flex justify-content-center text-white">
+				<h5>Twenty Program</h5>
+			</div>
+			<div class="row g-2" style="height: 5%;">
+				<div class="col-6">
+					<div class="row g-3" style="height: 5%;">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="inputGroup-sizing-sm">First Number</span>
+							<input type="number" class="form-control" id="twepFirstNumber">
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-warning w-100" style="color: #2d333a;" id="twepOperationsReset">reset</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-secondary w-100" id="twepOperationsRandom">Random Number Generation</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-success w-100" type="submit" id="twepOperationsSubmit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="row">
+						<div class="col">
+							<div id="twepResultNum" class="bg-dark p-2 text-white">
+								<label>Series : </label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+	</body>
+</html>

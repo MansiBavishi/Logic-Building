@@ -1,0 +1,9 @@
+body { padding: 2rem !important; margin: 0rem !important; border: 0rem !important; background-color: #434C57; }
+
+td { vertical-align: middle; }
+samp { color: greenyellow; }
+var { color: lightseagreen; }
+.borderRadiusPointFive { border-radius: 0.5vw; }
+.values { color: yellow; margin: 0; padding: 0; }
+.variables { color: #ffffff; margin: 0; padding: 0; }
+.brackets { color: darkviolet; margin: 0; padding: 0; }
