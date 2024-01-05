@@ -4,11 +4,11 @@ Read a Number that should be atleast 4 digit long then apply permutation and com
 
 ## code and Explaination
 
-- input from user
+- _input from user_
 
 const userInput = prompt("Enter a 4-digit number: ");
 
-- generate all the combinations
+- _generate all the combinations_
 
 function generateCombinations(digits) {
 let singleDigits = digits.slice();
@@ -55,7 +55,7 @@ let alldigits = singleDigits.concat(doubleDigits, tripleDigits, fourDigits);
 return alldigits;
 }
 
-- prime numbers from combinations
+- _prime numbers from combinations_
 
 function getPrimeNumbersFromArray(numbers) {
 function isPrime(num) {
@@ -68,7 +68,7 @@ return true;
 return numbers.filter((num) => isPrime(num));
 }
 
-- pascal triangle
+- _pascal triangle_
 
   function generatePascalsTriangleUntilElement(targetElement) {
   const triangle = [];
@@ -87,7 +87,7 @@ return numbers.filter((num) => isPrime(num));
   }
   }
 
-- set pascal triangle on html
+- _set pascal triangle on html_
 
 function generatePascalsTriangleHTML() {
 const triangleContainer = document.getElementById("pascals-triangle");
@@ -108,7 +108,7 @@ triangleContainer.appendChild(rowDiv);
 });
 }
 
-- set missing values and error ratio
+- _set missing values and error ratio_
 
 var missingElement = document.getElementById("missingElement");
 missingElement.innerHTML = "<p>" + missingPrimeNums.join("</p><p>") + "</p>";
