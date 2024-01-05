@@ -110,22 +110,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     return true;
   });
-  function generatePascalsTriangleHTML() {
-    const triangleContainer = document.getElementById("pascals-triangle");
-    finalResult.forEach((rowValues) => {
-      const rowDiv = document.createElement("div");
-      rowDiv.classList.add("row");
-      rowValues.forEach((value) => {
-        const cellDiv = document.createElement("div");
-        if (primeArray.includes(value)) {
-          cellDiv.classList.add("highlight");
-        } else {
-          cellDiv.classList.add("cell");
-        }
-        cellDiv.textContent = value;
-        rowDiv.appendChild(cellDiv);
-      });
-      triangleContainer.appendChild(rowDiv);
-    });
-  }
+  var missingElement = document.getElementById("missingElement");
+  missingElement.innerHTML = "<p>" + missingPrimeNums.join("</p><p>") + "</p>";
+
+  const errorRatioRate = missingPrimeNums.length / primeArray.length;
+  var errorRatio = document.getElementById("errorRatio");
+  errorRatio.innerHTML = "<p>" + errorRatioRate + "</p>";
 });
