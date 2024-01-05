@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      pre {
+        font-family: monospace;
+        white-space: pre-wrap;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+        display: flex;
+      }
+
+      .triangle {
+        text-align: center;
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+      }
+
+      .cell {
+        padding: 5px 10px;
+      }
+      .highlight {
+        padding: 5px 10px;
+        background-color: yellow;
+        border: 1px solid #000;
+        border-radius: 50%;
+      }
+      #missingElement {
+        padding-left: 150px;
+      }
+      h3 {
+        padding-left: 150px;
+      }
+      #errorRatio {
+        color: red;
+        padding-left: 150px;
+      }
+    </style>
+    <script src="./prime.js"></script>
+  </head>
+  <body>
+    <div id="pascals-triangle"></div>
+    <div>
+      <h3>missingElement</h3>
+      <div id="missingElement"></div>
+    </div>
+    <div>
+      <h3>Error Ratio</h3>
+      <div id="errorRatio">Error Ratio :</div>
+    </div>
+  </body>
+</html>
