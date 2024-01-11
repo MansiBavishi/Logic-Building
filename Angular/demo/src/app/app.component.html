@@ -1,0 +1,10 @@
+<input type="text" #inp />
+<button (click)="onSubmit(inp.value)">Insert</button>
+<ul>
+  <li *ngFor="let task of todo; let i = index">
+    <span *ngIf="!task.editMode">{{ task.name }}</span>
+    <input *ngIf="task.editMode" type="text" [(ngModel)]="task.name" />
+    <button (click)="onUpdate(i)">Update</button>
+    <button (click)="onDelete(i)">Delete</button>
+  </li>
+</ul>
