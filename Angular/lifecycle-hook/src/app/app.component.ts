@@ -1,4 +1,4 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ChildComponent } from './component/child/child.component';
@@ -8,25 +8,24 @@ import { ChildComponent } from './component/child/child.component';
   standalone: true,
   imports: [CommonModule, RouterOutlet, ChildComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent implements OnChanges {
+export class AppComponent {
   title = 'lifecycle-hook';
-  isVisible:boolean = false;
+  isVisible: boolean = false;
+  numFromChild!: number;
 
-  hideShow(){
+  receiveNum(num: number) {
+    this.numFromChild = num;
+    console.log(num);
+  }
+  hideShow() {
     this.isVisible = !this.isVisible;
-    console.log(this.isVisible)
   }
-  Increment(){
-
+  Increment() {
+    this.numFromChild++;
   }
-  Decrement(){
-    
-
-  }
-
-  onChange(){
-
+  Decrement() {
+    this.numFromChild--;
   }
 }

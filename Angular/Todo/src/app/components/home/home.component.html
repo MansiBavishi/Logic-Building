@@ -1,0 +1,21 @@
+<div class="toDoList">
+  <button (click)="addTask()" class="btn btn-primary m-3">Add Task</button>
+  <ul id="toDoTask">
+    <li *ngFor="let task of tasks; let i = index">
+      <span *ngIf="!task.editMode">{{ task.name }}</span>
+      <input *ngIf="task.editMode" type="text" [(ngModel)]="task.name" />
+      <button
+        id="updateTask"
+        (click)="onUpdate(i)"
+        class="btn btn-warning ms-2"
+      >
+        Update
+      </button>
+      <button id="deleteTask" (click)="onDelete(i)" class="btn btn-danger ms-2">
+        Delete
+      </button>
+    </li>
+  </ul>
+</div>
+
+<app-pop [pop]="popup" (childEvent)="popup_change($event)"></app-pop>

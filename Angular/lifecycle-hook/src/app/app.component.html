@@ -1,6 +1,7 @@
 <div>
   <button (click)="hideShow()">Hide/Show Box</button>
-  <app-child [abc]="isVisible"></app-child>
+  <app-child [abc]="isVisible" (numEvent)="receiveNum($event)"></app-child>
+  <div>{{ numFromChild }}</div>
   <button (click)="Increment()">Increment</button>
   <button (click)="Decrement()">Decrement</button>
 </div>
